@@ -22,4 +22,3 @@ unset( $_SESSION['TYPE'] );
 // 4. Destroy the session
 // session_destroy();
 redirect(web_root."./index.php?logout=1");
-?>

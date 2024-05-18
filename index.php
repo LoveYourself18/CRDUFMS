@@ -14,7 +14,7 @@ require_once("./include/initialize.php");
   <title>FMS-Login</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->  
+
   <link rel="icon" type="image/png" href="<?php echo web_root;?>plugins/adminlogin/images/icons/favicon.ico"/>
     <link href="./admin/dist/css/tabler.min.css" rel="stylesheet"/>
   </head>
@@ -29,9 +29,8 @@ require_once("./include/initialize.php");
           <?php check_message(); ?>
 
         </div>
-        <div class="card-head">
-            CBSUA Resarch
-            File Management System
+        <div class="card-head text-center text-white">
+            CBSUA Research File Management Systems
           </div>
         <form class="card card-md" action="" method="POST">
           <div class="card-body">
@@ -46,8 +45,8 @@ require_once("./include/initialize.php");
               </label>
               <div class="input-group input-group-flat">
                 <input type="password" class="form-control"  name="user_pass" placeholder="Password"  autocomplete="off">
-                <span class="input-group-text">
-                  <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
+                <span class="input-group-text" onclick="pass()">
+                  <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="2" /><path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" /></svg>
                   </a>
                 </span>

@@ -39,5 +39,3 @@ $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 
    
 require_once("../../themes/templates.php");
-?>
-  

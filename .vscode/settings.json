@@ -1,5 +1,6 @@
 {
     "dineug.vuerd-vscode.theme": {
     
-    }
+    },
+    "liveServer.settings.port": 5501
 }
