@@ -25,11 +25,11 @@
         <link type="text/css" href="<?php echo web_root; ?>css/dataTables.bootstrap.css" rel="stylesheet">
         <link type="text/css" href="<?php echo web_root; ?>e_admin\css\theme.css" rel="stylesheet">
 
-  <link type="text/css" href="./dist/css/tabler.min.css?1684106062" rel="stylesheet" />
-  <link type="text/css" href="./dist/css/tabler-flags.min.css?1684106062" rel="stylesheet" />
-  <link type="text/css" href="./dist/css/tabler-payments.min.css?1684106062" rel="stylesheet" />
-  <link type="text/css" href="./dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet" />
-  <link type="text/css" href="./dist/css/demo.min.css?1684106062" rel="stylesheet" />
+  <link type="text/css" href="../../dist/css/tabler.min.css?1684106062" rel="stylesheet" />
+  <link type="text/css" href="../dist/css/tabler-flags.min.css?1684106062" rel="stylesheet" />
+  <link type="text/css" href="../dist/css/tabler-payments.min.css?1684106062" rel="stylesheet" />
+  <link type="text/css" href="../dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet" />
+  <link type="text/css" href="../dist/css/demo.min.css?1684106062" rel="stylesheet" />
   <style>
     @import url('https://rsms.me/inter/inter.css');
 
@@ -55,7 +55,7 @@
         </button>
         <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
           <a href=".">
-            <img src="./static/fmslogo.png" width="32" height="32" alt="CBSUA" class="navbar-brand-image">
+            <img src="../../static/fmslogo.png" width="32" height="32" alt="CBSUA" class="navbar-brand-image">
           </a>
         </h1>
         <div>
@@ -88,7 +88,7 @@
           </div>
           <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
             <a href=".">
-              <img src="./static/fmslogo2.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+              <img src="../../static/fmslogo2.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
             </a>
           </h1>
         </div>
@@ -150,13 +150,13 @@
                           <a href="<?php echo web_root; ?>admin/files/in-ext-com/index.php" class="dropdown-item">
                             Incoming External
                           </a>
-                          <a href="./card-actions.html" class="dropdown-item">
+                          <a href="<?php echo web_root; ?>admin/files/in-int-com/index.php" class="dropdown-item">
                             Incoming Internal
                           </a>
-                          <a href="./cards-masonry.html" class="dropdown-item">
+                          <a href="<?php echo web_root; ?>admin/files/out-ext-com/index.php" class="dropdown-item">
                             Ougoing External
                           </a>
-                          <a href="./cards-masonry.html" class="dropdown-item">
+                          <a href="<?php echo web_root; ?>admin/files/out-int-com/index.php" class="dropdown-item">
                             Ougoing Internal
                           </a>
                         </div>
@@ -435,7 +435,7 @@
   <script src="./dist/libs/jsvectormap/dist/maps/world.js?1684106062" defer></script>
   <script src="./dist/libs/jsvectormap/dist/maps/world-merc.js?1684106062" defer></script>
   <!-- Tabler Core -->
-  <script src="./dist/js/tabler.min.js?1684106062" defer></script>
+  <script src="../../dist/js/tabler.min.js?1684106062" defer></script>
   <script src="./dist/js/demo.min.js?1684106062" defer></script>
 
   <script src="<?php echo web_root; ?>e_admin/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
