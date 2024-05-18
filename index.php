@@ -16,7 +16,7 @@ require_once("./include/initialize.php");
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->  
   <link rel="icon" type="image/png" href="<?php echo web_root;?>plugins/adminlogin/images/icons/favicon.ico"/>
-    <link href="./dist/css/tabler.min.css" rel="stylesheet"/>
+    <link href="./admin/dist/css/tabler.min.css" rel="stylesheet"/>
   </head>
   <body  class=" border-top-wide border-primary d-flex flex-column">
     <div class="page page-center">
@@ -80,7 +80,7 @@ if(isset($_POST['btnLogin'])){
    if ($email == '' OR $upass == '') {
 
       message("Invalid Username and Password!", "error");
-      redirect("login.php");
+      redirect("../index.php");
 
     } else {
   //it creates a new objects of member
@@ -92,11 +92,11 @@ if(isset($_POST['btnLogin'])){
       if ($_SESSION['TYPE']=='Administrator'){
          redirect(web_root."admin/index.php");
       }else{
-           redirect(web_root."./login.php");
+           redirect(web_root."./index.php");
       }
     }else{
       message("Account does not exist! Please contact Administrator.", "error");
-       redirect(web_root."./login.php");
+       redirect(web_root."./index.php");
     }
  }
  }
