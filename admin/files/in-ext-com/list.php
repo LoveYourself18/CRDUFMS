@@ -71,9 +71,9 @@ if (!isset($_SESSION['USERID'])) {
                                 style="font-size:12px" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Chapter</th>
                                         <th>Title</th>
-                                        <th>File Type</th>
+                                        <th>Description</th>
+                                        <th>Year Uploaded</th>
                                         <th width="27%">Action</th>
                                     </tr>
                                 </thead>

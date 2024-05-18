@@ -1,5 +1,5 @@
 <?php
-require_once("../include/initialize.php");
+require_once("./include/initialize.php");
 
  ?>
   <?php
@@ -92,11 +92,11 @@ if(isset($_POST['btnLogin'])){
       if ($_SESSION['TYPE']=='Administrator'){
          redirect(web_root."admin/index.php");
       }else{
-           redirect(web_root."admin/login.php");
+           redirect(web_root."./login.php");
       }
     }else{
       message("Account does not exist! Please contact Administrator.", "error");
-       redirect(web_root."admin/login.php");
+       redirect(web_root."./login.php");
     }
  }
  }
