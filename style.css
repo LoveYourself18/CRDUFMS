@@ -108,3 +108,7 @@ body {
 .login .login-btn:focus {
     border-radius: 10px;
 }
+
+td {
+    word-break: break-all;
+}

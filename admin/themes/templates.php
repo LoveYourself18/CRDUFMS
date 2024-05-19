@@ -24,6 +24,7 @@
   <link type="text/css" href="../../dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet" />
   <link type="text/css" href="../../dist/css/demo.min.css?1684106062" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../../../style.css">
 
 </head>
 
