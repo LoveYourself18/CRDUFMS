@@ -8,12 +8,6 @@
 * Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
 -->
 <html lang="en">
-<!-- CSS files -->
-
-<!-- <link type="text/css" href="<?php echo web_root; ?>e_admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link type="text/css" href="<?php echo web_root; ?>e_admin/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link type="text/css" href="<?php echo web_root; ?>e_admin/images/icons/css/font-awesome.css" rel="stylesheet"> -->
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -24,12 +18,12 @@
   <link type="text/css" href="<?php echo web_root; ?>css/dataTables.bootstrap.css" rel="stylesheet">
   <link type="text/css" href="<?php echo web_root; ?>e_admin\css\theme.css" rel="stylesheet">
 
-  <link type="text/css" href="./dist/css/tabler.min.css?1684106062" rel="stylesheet" />
   <link type="text/css" href="../../dist/css/tabler.min.css?1684106062" rel="stylesheet" />
-  <link type="text/css" href="../dist/css/tabler-flags.min.css?1684106062" rel="stylesheet" />
-  <link type="text/css" href="../dist/css/tabler-payments.min.css?1684106062" rel="stylesheet" />
-  <link type="text/css" href="../dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet" />
-  <link type="text/css" href="../dist/css/demo.min.css?1684106062" rel="stylesheet" />
+  <link type="text/css" href="../../dist/css/tabler-flags.min.css?1684106062" rel="stylesheet" />
+  <link type="text/css" href="../../dist/css/tabler-payments.min.css?1684106062" rel="stylesheet" />
+  <link type="text/css" href="../../dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet" />
+  <link type="text/css" href="../../dist/css/demo.min.css?1684106062" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
@@ -385,13 +379,13 @@
       </div>
     </div>
     <!-- Libs JS -->
-    <script src="./dist/libs/apexcharts/dist/apexcharts.min.js?1684106062" defer></script>
-    <script src="./dist/libs/jsvectormap/dist/js/jsvectormap.min.js?1684106062" defer></script>
-    <script src="./dist/libs/jsvectormap/dist/maps/world.js?1684106062" defer></script>
-    <script src="./dist/libs/jsvectormap/dist/maps/world-merc.js?1684106062" defer></script>
+    <script src="../../dist/libs/apexcharts/dist/apexcharts.min.js?1684106062" defer></script>
+    <script src="../../dist/libs/jsvectormap/dist/js/jsvectormap.min.js?1684106062" defer></script>
+    <script src="../../dist/libs/jsvectormap/dist/maps/world.js?1684106062" defer></script>
+    <script src="../../dist/libs/jsvectormap/dist/maps/world-merc.js?1684106062" defer></script>
     <!-- Tabler Core -->
     <script src="../../dist/js/tabler.min.js?1684106062" defer></script>
-    <script src="./dist/js/demo.min.js?1684106062" defer></script>
+    <script src="../../dist/js/demo.min.js?1684106062" defer></script>
 
     <script src="<?php echo web_root; ?>e_admin/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="<?php echo web_root; ?>e_admin/scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>

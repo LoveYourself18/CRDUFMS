@@ -1108,8 +1108,7 @@ border-top-left-radius: 3px;
 	padding: 0
 }
 .stream.new-update a, .stream.load-more a {
-	background: #background: #f7f7f7;;
-	
+	background: #f7f7f7;
 	color: #555;
 	font-weight: 600;
 	font-size: 14px;
@@ -1464,8 +1463,6 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='@topColor', end
 filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe6e6e6', GradientType=0)
 }
 .datatable-pagination>a.paginate_disabled_previous, .datatable-pagination>a.paginate_disabled_next {
-		
-	
 	cursor: default
 }
 .datatable-pagination>a.paginate_disabled_previous i, .datatable-pagination>a.paginate_disabled_next i {
