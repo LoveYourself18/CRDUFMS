@@ -79,30 +79,25 @@ if (!isset($_SESSION['USERID'])) {
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $mydb->setQuery('SELECT * FROM  `tbllesson`');
+                                    $mydb->setQuery('SELECT * FROM  `in_ext_com`');
                                     $cur = $mydb->loadResultList();
                                     foreach ($cur as $result) {
                                         echo '<tr>';
-                                        echo '<td>' . $result->LessonChapter . '</td>';
-                                        echo '<td>' . $result->LessonTitle . '</td>';
-                                        echo '<td>' . $result->Category . '</td>';
-                                        if ($result->Category == 'Video') {
-                                            $view = 'index.php?view=playvideo&id=' . $result->LessonID;
-                                        } else {
-                                            $view = 'index.php?view=viewpdf&id=' . $result->LessonID;
-                                        }
+                                        echo '<td>' . $result->in_ext_com_title . '</td>';
+                                        echo '<td>' . $result->in_ext_com_desc . '</td>';
+                                        echo '<td>' . $result->in_ext_com_year . '</td>';
                                         echo '<td class="text">
                                             <a title="View" href="' .
                             $view .
                             '" class="btn btn-ghost-info w-30" >View File</a>
                                             <a title="Edit" href="index.php?view=edit&id=' .
-                            $result->LessonID .
+                            $result->in_ext_com_ID .
                             '" class="btn btn-ghost-primary w-30" >Edit</a>
                             <a title="Edit" href="index.php?view=uploadfile&id=' .
-                            $result->LessonID .
+                            $result->in_ext_com_ID .
                             '" class="btn btn-ghost-warning w-30" >Change File</a>
                                         				  					 <a title="Delete" href="controller.php?action=delete&id=' .
-                            $result->LessonID .
+                            $result->in_ext_com_ID .
                             '" class="btn btn-ghost-danger w-30" >Delete</a>
                                                     </a>
                                                     
@@ -146,12 +141,16 @@ if (!isset($_SESSION['USERID'])) {
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="control-label" for="Category">Select File Type:</label>
-                    <input name="deptid" type="hidden" value="">
-                    <select type="text" class="form-select" id="Category" name="Category" value="">
-                        <option>Docs</option>
-                        <option>Video</option>
-                    </select>
+                    <label for="year">Select Year:</label>
+        <select name="year" id="year">
+            <?php
+            $currentYear = date('Y');
+            $startYear = 2010;
+            for ($year = $currentYear; $year >= $startYear; $year--) {
+                echo "<option value=\"$year\">$year</option>";
+            }
+            ?>
+        </select>
                 </div>
                 <div class="mb-3">
                     <label class="control-label" align="right" for="file">Upload File:</label>

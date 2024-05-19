@@ -2,7 +2,7 @@
 require_once(LIB_PATH.DS.'database.php');
  // SELECT `LessonID`, `EVENT_TEXT`, `EVENT_WHAT`, `EVENT_WHEN`, `EVENT_WHERE` FROM `tblevent` WHERE 1
  class Lesson {
-	protected static  $tblname = "tbllesson";
+	protected static  $tblname = "in_ext_com";
 
 	function dbfields () {
 		global $mydb;
