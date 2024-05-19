@@ -4,7 +4,7 @@ if (!isset($_SESSION['USERID'])) {
 } ?>
 
 
-<div class="page-wrapper col-11 ms-6">
+<div class="inc-ext-com page-wrapper col-11 ms-6">
     <div class="page-header d-print-none">
         <div class="container-xl">
             <div class="row g-2 align-items-center">
