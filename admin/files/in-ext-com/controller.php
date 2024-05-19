@@ -37,10 +37,10 @@ switch ($action) {
 			$location = "files/". $filename ;
 
 			$lesson = new Lesson();
-			$lesson->LessonChapter = $chapter;
-			$lesson->LessonTitle   = $title;
-			$lesson->FileLocation  = $location;
-			$lesson->Category  = $category;
+			$lesson->in_ext_com_title = $chapter;
+			$lesson->in_ext_com_desc   = $title;
+			$lesson->in_ext_com_FileLocation  = $location;
+			$lesson->in_ext_com_year  = $category;
 			$lesson->create(); 
 
 			message("Lesson has been saved in the database.", "success");
@@ -61,9 +61,9 @@ switch ($action) {
 				// $location = "files/". $filename ;
 
 				$lesson = new Lesson();
-				$lesson->LessonChapter = $chapter;
-				$lesson->LessonTitle   = $title;
-				$lesson->Category  = $category;
+				$lesson->in_ext_com_title = $chapter;
+				$lesson->in_ext_com_desc   = $title;
+				$lesson->in_ext_com_year  = $category;
 				// $lesson->FileLocation  = $location;
 				$lesson->update($id); 
 
@@ -100,7 +100,7 @@ switch ($action) {
 				$location = "files/". $filename ;
 
 				$lesson = new Lesson(); 
-				$lesson->FileLocation  = $location;
+				$lesson->in_ext_com_FileLocation  = $location;
 				$lesson->update($id); 
 
 				message("File has been updated in the database.", "success");
