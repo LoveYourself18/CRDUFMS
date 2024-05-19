@@ -16,7 +16,7 @@
 
            <div class="row">
          <div class="col-lg-12">
-            <h1 class="page-header">Update Lesson</h1>
+            <h1 class="page-header">Update File</h1>
           </div>
           <!-- /.col-lg-12 -->
        </div> 
@@ -24,12 +24,12 @@
             <div class="form-group">
                     <div class="col-md-11">
                       <label class="col-md-2 control-label" for=
-                      "LessonChapter">Chapter:</label>
+                      "LessonChapter">Title:</label>
 
                       <div class="col-md-10">
-                        <input name="LessonID" type="hidden" value="<?php echo $res->LessonID; ?>">
+                        <input name="LessonID" type="hidden" value="<?php echo $res->in_ext_com_ID; ?>">
                          <input class="form-control input-sm" id="LessonChapter" name="LessonChapter" placeholder=
-                            "Chapter" type="text" value="<?php echo $res->LessonChapter; ?>">
+                            "Chapter" type="text" value="<?php echo $res->in_ext_com_title; ?>">
                       </div>
                     </div>
                   </div>
@@ -37,17 +37,17 @@
                    <div class="form-group">
                     <div class="col-md-11">
                       <label class="col-md-2 control-label" for=
-                      "LessonTitle">Title:</label>
+                      "LessonTitle">Description:</label>
 
                       <div class="col-md-10">
                         <input name="deptid" type="hidden" value="">
                          <input class="form-control input-sm" id="LessonTitle" name="LessonTitle" placeholder=
-                            "Title" type="text" value="<?php echo $res->LessonTitle; ?>">
+                            "Title" type="text" value="<?php echo $res->in_ext_com_sender; ?>">
                       </div>
                     </div>
                   </div>
 
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <div class="col-md-11">
                       <label class="col-md-2 control-label" for=
                       "Category">Select File Type:</label>
@@ -60,7 +60,7 @@
                          </select>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
       <!--              <div class="form-group">
                     <div class="col-md-11">

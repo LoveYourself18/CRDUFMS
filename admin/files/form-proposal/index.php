@@ -5,7 +5,7 @@ if(!isset($_SESSION['USERID'])){
 }
 
 $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
-
+ $header=$view; 
 switch ($view) {
 	case 'list' :
 		$content    = 'list.php';		
@@ -18,12 +18,8 @@ switch ($view) {
 	case 'edit' :
 		$content    = 'edit.php';		
 		break;
-    case 'view' :
-		$content    = 'view.php';		
-		break;
 
 	default :
 		$content    = 'list.php';		
 }
-
 require_once("../../themes/templates.php");

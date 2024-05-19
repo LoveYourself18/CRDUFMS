@@ -1,8 +1,8 @@
 <?php
 require_once ("../../../include/initialize.php");
-	 if (!isset($_SESSION['USERID'])){
-      redirect(web_root."admin/index.php");
-     }
+	if(!isset($_SESSION['USERID'])){
+	redirect(web_root."admin/index.php");
+}
 
 $action = (isset($_GET['action']) && $_GET['action'] != '') ? $_GET['action'] : '';
 
@@ -17,69 +17,110 @@ switch ($action) {
 	
 	case 'delete' :
 	doDelete();
-	break; 
+	break;
 
+ 
 	}
    
-	function doInsert(){
-		if(isset($_POST['save'])){
+	function doInsert(){ 
+		if(isset($_POST['save'])){ 
 
+			$chapter = $_POST['LessonChapter'];
+			$title  = $_POST['LessonTitle'];
+			$link = $_POST['link'];
 
-			$exercise = New Exercise();  
-			$exercise->fpID 				= $_POST['ExerciseID']; 
-			$exercise->fpTitle				= $_POST['Question']; 
-			$exercise->fpDescription		= $_POST['Answer'];
-			$exercise->fpLink 				= $_POST['ChoiceA'];
-			$exercise->create(); 
+			$lesson = new Lesson();
+			$lesson->fpTitle = $chapter;
+			$lesson->fpDescription  = $title;
+			$lesson->fpLink = $link;
+			$lesson->create(); 
 
-			message("File has been saved in the database.", "success");
+			message("Data has been saved in the database.", "success");
 			redirect("index.php");
-			}
+			
+		}  
+	}
+
+	function doEdit(){ 
+		if(isset($_POST['save'])){  
+			$chapter = $_POST['LessonChapter'];
+			$title  = $_POST['LessonTitle'];
+			$link = $_POST['link'];
+
+				$lesson = new Lesson();
+				$lesson->fpTitle = $chapter;
+				$lesson->fpDescription   = $title;
+				$lesson->fpLink  = $link;
+				$lesson->update($id); 
+
+				message("Data has been saved in the database.", "success");
+				redirect("index.php");
 		 
-		}
 
-	function doEdit(){
-		global $mydb;
-	if(isset($_POST['save'])){
-			$id = $_POST['ExerciseID'];
-
-
-			$exercise = New Exercise();   
-			$exercise->LessonID 			= $_POST['Lesson']; 
-			$exercise->Question				= $_POST['Question']; 
-			$exercise->Answer				= $_POST['Answer'];
-			$exercise->ChoiceA 				= $_POST['ChoiceA'];
-			$exercise->ChoiceB				= $_POST['ChoiceB']; 
-			$exercise->ChoiceC				= $_POST['ChoiceC']; 
-			$exercise->ChoiceD				= $_POST['ChoiceD']; 
-			$exercise->update($id); 
-
-			$sql = "UPDATE tblstudentquestion SET   `LessonID`='".$_POST['LESSON']."', `Question`='".$_POST['Question']."', `CA`='".$_POST['ChoiceA']."', `CB`='".$_POST['ChoiceB']."', `CC`='".$_POST['ChoiceC']."', `CD`='".$_POST['ChoiceD']."', `QA`='".$_POST['Answer']." WHERE ExerciseID='{$id}'";
-			$mydb->setQuery($sql);
-			$mydb->executeQuery();
-
-
-			message("Question has been updated!", "success");
-			redirect("index.php");
+			
+	 		
 		}
 	}
 
 
 	function doDelete(){
-		global $mydb;
-		
-				$id = 	$_GET['id'];
+		 
+			$id = 	$_GET['id'];
 
-				$exercise = New Exercise();
-	 		 	$exercise->delete($id);
-
-				$sql = "DELETE FROM tblstudentquestion  WHERE ExerciseID='{$id}'";
-				$mydb->setQuery($sql);
-				$mydb->executeQuery();
-			 
-			message("Question already Deleted!","info");
+			$lesson = New Lesson();
+			$lesson->delete($id);
+ 
+			message("Data has been removed!","info");
 			redirect('index.php');
-	 
+		 
 		
 	}
+
+
+// 	function dochangefile(){
+// 		if(isset($_POST['save'])){   
+// 			$id = $_POST['LessonID']; 
+
+ 
+// 				$filename = UploadImage();
+// 				$location = "files/". $filename ;
+
+// 				$lesson = new Lesson(); 
+// 				$lesson->in_ext_com_FileLocation  = $location;
+// 				$lesson->update($id); 
+
+// 				message("File has been updated in the database.", "success");
+// 				redirect("index.php");
+		 
+
+			
+	 		
+// 		}
+// 	}
+
+ 
+ 
+//   function UploadImage(){
+// 			$target_dir = "files/";
+// 		    $target_file = $target_dir  . basename($_FILES["file"]["name"]);
+// 			$uploadOk = 1;
+// 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+			
+			
+// 			if($imageFileType != "jpg" || $imageFileType != "png" || $imageFileType != "jpeg"
+// 				|| $imageFileType != "gif" || $imageFileType != "docs" || $imageFileType != "mp4") {
+// 				 if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
+// 					return   basename($_FILES["file"]["name"]);
+// 				}else{
+// 					echo "Error Uploading File";
+// 					exit;
+// 				}
+// 			}else{
+// 					echo "File Not Supported";
+// 					exit;
+// 	 }
+// } 
+
+	 
+ 
 ?>

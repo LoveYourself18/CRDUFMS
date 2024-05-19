@@ -37,5 +37,3 @@ switch ($view) {
 		$content    = 'list.php';		
 }
 require_once("../../themes/templates.php");
-?>
-  

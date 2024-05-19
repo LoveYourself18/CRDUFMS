@@ -24,11 +24,11 @@
         <div class="form-group">
                     <div class="col-md-11">
                       <label class="col-md-2 control-label" for=
-                      "LessonChapter">Chapter:</label>
+                      "LessonChapter">Title:</label>
 
                       <div class="col-md-10">
-                        <input name="LessonID" type="hidden" value="<?php echo $res->LessonID; ?>">
-                        <label class="control-label"><?php echo $res->LessonChapter; ?></label>
+                        <input name="LessonID" type="hidden" value="<?php echo $res->in_ext_com_ID; ?>">
+                        <label class="control-label"><?php echo $res->in_ext_com_title; ?></label>
                       </div>
                     </div>
                   </div>
@@ -36,15 +36,15 @@
                    <div class="form-group">
                     <div class="col-md-11">
                       <label class="col-md-2 control-label" for=
-                      "LessonTitle">Title:</label>
+                      "LessonTitle">Description:</label>
 
                       <div class="col-md-10">
                         <input name="deptid" type="hidden" value="">
-                        <label class="control-label"><?php echo $res->LessonTitle; ?></label>
+                        <label class="control-label"><?php echo $res->in_ext_com_sender; ?></label>
                       </div>
                     </div>
                   </div>
-
+<!-- 
                   <div class="form-group">
                     <div class="col-md-11">
                       <label class="col-md-2 control-label" for=
@@ -56,7 +56,7 @@
                       </div>
                     </div>
                   </div>
- 
+  -->
 
              <div class="form-group">
               <div class="col-md-11">
@@ -64,7 +64,7 @@
                 "file">Upload File:</label>
 
                 <div class="col-md-10"> 
-                <input type="file" name="file" value="<?php echo $res->FileLocation; ?>" />
+                <input type="file" name="file" value="<?php echo $res->in_ext_com_FileLocation; ?>" />
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@ if (!isset($_SESSION['USERID'])) {
 } ?>
 
 
-<div class="page-wrapper col-11 ms-6">
+<div class="inc-ext-com page-wrapper col-11 ms-6">
     <div class="page-header d-print-none">
         <div class="container-xl">
             <div class="row g-2 align-items-center">
@@ -42,22 +42,6 @@ if (!isset($_SESSION['USERID'])) {
     <div class="page-body">
         <div class="col">
             <div class="card">
-                <!-- <div class="table-responsive">
-                        <form action="controller.php?action=delete" Method="POST">
-                            <table class="table card-table datatable table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Title</th>
-                                        <th>Description</th>
-                                        <th>Year filed</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </form>
-                    </div> -->
                 <form action="controller.php?action=delete" Method="POST">
                     <div class="table-responsive">
                         <table id="example" class="datatable-1 table table-striped table-bordered table-hover table-responsive" style="font-size:12px" cellspacing="0">
@@ -65,40 +49,32 @@ if (!isset($_SESSION['USERID'])) {
                                 <tr>
                                     <th>Title</th>
                                     <th>Description</th>
-                                    <th width="18.5%">Action</th>
+                                    <th width="27%">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $mydb->setQuery(
-                                    'SELECT * FROM  `form_proposal`'
-                                );
+                                $mydb->setQuery('SELECT * FROM `form_proposal`');
                                 $cur = $mydb->loadResultList();
                                 foreach ($cur as $result) {
                                     echo '<tr>';
-                                    echo '<td>' .
-                                        $result->fpTitle .
-                                        '</td>';
-                                    echo '<td>' .
-                                        $result->fpDescription .
-                                        '</td>';
-                                    echo '<td class="text">
-                                            <a title="Edit" href="' . $result->fpLink . '" target="_blank" class="btn btn-outline-secondary w-30" >Edit</a>
-                            			  					 <a title="Delete" href="controller.php?action=delete&id=' .
-                                        $result->fpID .
-                                    '" class="btn btn-outline-danger w-30" >Delete</a>
-                                                    </a>
-                                                    
-                                        </td>';
+                                    echo '<td>' . $result->fpTitle . '</td>';
+                                    echo '<td>' . $result->fpDescription . '</td>';
+                                    $Link = $result->fpLink;
+                                    echo '<td class="text d-flex gap-2">
+            <a title="View" href="'.$Link.'" target="_blank" class="btn btn-outline-success w-30">View</a>
+            <a title="Delete" href="controller.php?action=delete&id=' . $result->fpID . '" class="btn btn-outline-danger w-30">Delete</a>
+        </td>';
                                     echo '</tr>';
                                 }
                                 ?>
                             </tbody>
+
                         </table>
                     </div>
                 </form>
             </div>
-        </diV>
+        </div>
     </div>
 </div>
 
@@ -127,9 +103,9 @@ if (!isset($_SESSION['USERID'])) {
                 </div>
                 <div class="row mb-3 align-items-end">
                     <div class="col">
-                        <label class="control-label" for="LessonTitle">File Link</label>
+                        <label class="control-label" for="LessonTitle">Description</label>
                         <input name="deptid" type="hidden" value="">
-                        <input class="form-control input-sm" id="LessonTitle" name="LessonTitle" placeholder="Link" type="text" value="">
+                        <input class="form-control input-sm" id="link" name="link" placeholder="Link" type="text" value="">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -141,7 +117,7 @@ if (!isset($_SESSION['USERID'])) {
                         Save
                     </button>
                 </div>
+            </form>
         </div>
     </div>
-    </form>
 </div>

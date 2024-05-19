@@ -4,7 +4,7 @@ if (!isset($_SESSION['USERID'])) {
 } ?>
 
 
-<div class="page-wrapper col-11 ms-6">
+<div class="inc-ext-com page-wrapper col-11 ms-6">
     <div class="page-header d-print-none">
         <div class="container-xl">
             <div class="row g-2 align-items-center">
@@ -13,7 +13,7 @@ if (!isset($_SESSION['USERID'])) {
                         General Files
                     </div>
                     <h2 class="page-title">
-                        Incoming Internal Communications
+                        Incoming External Communications
                     </h2>
                 </div>
                 <div class="col-auto ms-auto d-print-none">
@@ -48,50 +48,37 @@ if (!isset($_SESSION['USERID'])) {
                             <thead>
                                 <tr>
                                     <th>Title</th>
-                                    <th>Description</th>
-                                    <th>Year Uploaded</th>
+                                    <th>Sender</th>
+                                    <th>Date Received</th>
                                     <th width="27%">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $mydb->setQuery('SELECT * FROM  `tbllesson`');
+                                $mydb->setQuery('SELECT * FROM `in_ext_com`');
                                 $cur = $mydb->loadResultList();
                                 foreach ($cur as $result) {
                                     echo '<tr>';
-                                    echo '<td>' . $result->LessonChapter . '</td>';
-                                    echo '<td>' . $result->LessonTitle . '</td>';
-                                    echo '<td>' . $result->Category . '</td>';
-                                    if ($result->Category == 'Video') {
-                                        $view = 'index.php?view=playvideo&id=' . $result->LessonID;
-                                    } else {
-                                        $view = 'index.php?view=viewpdf&id=' . $result->LessonID;
-                                    }
-                                    echo '<td class="text">
-                                            <a title="View" href="' .
-                                        $view .
-                                        '" class="btn btn-outline-success w-30" >View</a>
-                                            <a title="Edit" href="index.php?view=edit&id=' .
-                                        $result->LessonID .
-                                        '" class="btn btn-outline-secondary w-30" >Edit</a>
-                            <a title="Edit" href="index.php?view=uploadfile&id=' .
-                                        $result->LessonID .
-                                        '" class="btn btn-outline-warning w-30" >Change</a>
-                                        				  					 <a title="Delete" href="controller.php?action=delete&id=' .
-                                        $result->LessonID .
-                                        '" class="btn btn-outline-danger w-30" >Delete</a>
-                                                    </a>
-                                                    
-                                        </td>';
+                                    echo '<td>' . $result->in_ext_com_title . '</td>';
+                                    echo '<td>' . $result->in_ext_com_sender . '</td>';
+                                    echo '<td>' . $result->in_ext_com_dateReceived . '</td>';
+                                    $view = 'index.php?view=viewpdf&id=' . $result->in_ext_com_ID;
+                                    echo '<td class="text d-flex gap-2">
+            <a title="View" href="'.$view.'" target="_blank" class="btn btn-outline-success w-30">View</a>
+            <a title="Edit" href="index.php?view=edit&id=' . $result->in_ext_com_ID . '" class="btn btn-outline-secondary w-30">Edit</a>
+            <a title="Edit" href="index.php?view=uploadfile&id=' . $result->in_ext_com_ID . '" class="btn btn-outline-warning w-30">Change</a>
+            <a title="Delete" href="controller.php?action=delete&id=' . $result->in_ext_com_ID . '" class="btn btn-outline-danger w-30">Delete</a>
+        </td>';
                                     echo '</tr>';
                                 }
                                 ?>
                             </tbody>
+
                         </table>
                     </div>
                 </form>
             </div>
-        </diV>
+        </div>
     </div>
 </div>
 
@@ -108,22 +95,26 @@ if (!isset($_SESSION['USERID'])) {
                     <div class="col">
                         <label class="control-label" for="LessonChapter">Title</label>
                         <input name="deptid" type="hidden" value="">
-                        <input class="form-control input-sm" id="LessonChapter" name="LessonChapter" placeholder="Chapter" type="text" value="">
+                        <input class="form-control input-sm" id="LessonChapter" name="LessonChapter" placeholder="Title" type="text" value="">
                     </div>
                 </div>
                 <div class="row mb-3 align-items-end">
                     <div class="col">
-                        <label class="control-label" for="LessonTitle">Description</label>
+                        <label class="control-label" for="LessonTitle">Sender</label>
                         <input name="deptid" type="hidden" value="">
-                        <input class="form-control input-sm" id="LessonTitle" name="LessonTitle" placeholder="Title" type="text" value="">
+                        <input class="form-control input-sm" id="LessonTitle" name="LessonTitle" placeholder="Sender" type="text" value="">
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="control-label" for="Category">Select File Type:</label>
-                    <input name="deptid" type="hidden" value="">
-                    <select type="text" class="form-select" id="Category" name="Category" value="">
-                        <option>Docs</option>
-                        <option>Video</option>
+                    <label for="year">Select Year:</label>
+                    <select name="year" id="year">
+                        <?php
+                        $currentYear = date('Y');
+                        $startYear = 2010;
+                        for ($year = $currentYear; $year >= $startYear; $year--) {
+                            echo "<option value=\"$year\">$year</option>";
+                        }
+                        ?>
                     </select>
                 </div>
                 <div class="mb-3">
@@ -139,7 +130,7 @@ if (!isset($_SESSION['USERID'])) {
                         Save
                     </button>
                 </div>
+            </form>
         </div>
     </div>
-    </form>
 </div>
