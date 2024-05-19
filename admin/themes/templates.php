@@ -25,6 +25,7 @@
   <link type="text/css" href="<?php echo web_root; ?>e_admin\css\theme.css" rel="stylesheet">
 
   <link type="text/css" href="./dist/css/tabler.min.css?1684106062" rel="stylesheet" />
+  <link type="text/css" href="../../dist/css/tabler.min.css?1684106062" rel="stylesheet" />
   <link type="text/css" href="../dist/css/tabler-flags.min.css?1684106062" rel="stylesheet" />
   <link type="text/css" href="../dist/css/tabler-payments.min.css?1684106062" rel="stylesheet" />
   <link type="text/css" href="../dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet" />
@@ -64,13 +65,6 @@
         </div>
         <div class="navbar-nav flex-row order-md-last">
           <div class="d-none d-md-flex">
-            <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip" data-bs-placement="bottom">
-              <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-              </svg>
-            </a>
             <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode" data-bs-toggle="tooltip" data-bs-placement="bottom">
               <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -81,9 +75,7 @@
             </a>
           </div>
           <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-            <a href=".">
-              <img src="../../static/fmslogo2.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
-            </a>
+            <img src="../../static/fmslogo2.png" width="110" height="32" alt="CBSUA Images" class="navbar-brand-image">
           </h1>
         </div>
       </div>
@@ -141,10 +133,10 @@
                             Incoming Internal
                           </a>
                           <a href="<?php echo web_root; ?>admin/files/out-ext-com/index.php" class="dropdown-item">
-                            Ougoing External
+                            Outgoing External
                           </a>
                           <a href="<?php echo web_root; ?>admin/files/out-int-com/index.php" class="dropdown-item">
-                            Ougoing Internal
+                            Outgoing Internal
                           </a>
                         </div>
                       </div>
