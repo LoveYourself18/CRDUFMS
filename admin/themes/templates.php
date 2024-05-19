@@ -30,21 +30,10 @@
   <link type="text/css" href="../dist/css/tabler-payments.min.css?1684106062" rel="stylesheet" />
   <link type="text/css" href="../dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet" />
   <link type="text/css" href="../dist/css/demo.min.css?1684106062" rel="stylesheet" />
-  <style>
-    @import url('https://rsms.me/inter/inter.css');
 
-    :root {
-      --tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
-    }
-
-    body {
-      font-feature-settings: "cv03", "cv04", "cv11";
-    }
-  </style>
 </head>
 
 <body class=" layout-boxed">
-  <script src="./dist/js/demo-theme.min.js?1684106062"></script>
   <div class="page">
     <!-- Navbar -->
     <header class="navbar navbar-expand-md d-print-none">
@@ -80,7 +69,7 @@
         </div>
       </div>
     </header>
-    <header class="navbar-expand-md ">
+    <header class="navbar-expand-md">
       <div class="collapse navbar-collapse" id="navbar-menu">
         <div class="navbar">
           <div class="container-xl">
@@ -382,7 +371,7 @@
         </div>
       </div>
     </div>
-    <div class="span9">
+    <div class="span">
       <div class="content">
         <div class="module">
           <?php check_message(); ?>

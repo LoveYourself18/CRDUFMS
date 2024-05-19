@@ -48,6 +48,7 @@ $view = (isset($_GET['page']) && $_GET['page'] != '') ? $_GET['page'] : '';
 			font-feature-settings: "cv03", "cv04", "cv11";
 		}
 	</style>
+	<link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body class=" layout-boxed">
