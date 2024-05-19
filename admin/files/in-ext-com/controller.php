@@ -31,7 +31,7 @@ switch ($action) {
 
 			$chapter = $_POST['LessonChapter'];
 			$title  = $_POST['LessonTitle'];
-			$category = $_POST['Category'];
+			$category = $_POST['year'];
 
 			$filename = UploadImage();
 			$location = "files/". $filename ;
