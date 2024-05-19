@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2024 at 04:29 PM
+-- Generation Time: May 19, 2024 at 07:54 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -24,24 +24,456 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `form_completed`
+--
+
+CREATE TABLE `form_completed` (
+  `fcID` int(11) NOT NULL,
+  `fcTitle` varchar(500) NOT NULL,
+  `fcDescription` varchar(500) NOT NULL,
+  `fcLink` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `form_completed`
+--
+
+INSERT INTO `form_completed` (`fcID`, `fcTitle`, `fcDescription`, `fcLink`) VALUES
+(20180001, 'What is the title of the video', 'My Father', ''),
+(20180002, 'Who is the name of the character in the story?', 'Ben', ''),
+(20240003, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'hv,kv', ''),
+(20240004, 'fnjhn', 'fhhhhhhh', ''),
+(20240005, '', '', ''),
+(20240006, '', '', ''),
+(20240007, '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `form_monitoring`
+--
+
+CREATE TABLE `form_monitoring` (
+  `fmID` int(11) NOT NULL,
+  `fmTitle` varchar(500) NOT NULL,
+  `fmDescription` varchar(500) NOT NULL,
+  `fmLink` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `form_monitoring`
+--
+
+INSERT INTO `form_monitoring` (`fmID`, `fmTitle`, `fmDescription`, `fmLink`) VALUES
+(20180001, 'What is the title of the video', 'My Father', ''),
+(20180002, 'Who is the name of the character in the story?', 'Ben', ''),
+(20240003, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'hv,kv', ''),
+(20240004, 'fnjhn', 'fhhhhhhh', ''),
+(20240005, '', '', ''),
+(20240006, '', '', ''),
+(20240007, '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `form_proposal`
+--
+
+CREATE TABLE `form_proposal` (
+  `fpID` int(11) NOT NULL,
+  `fpTitle` varchar(500) NOT NULL,
+  `fpDescription` varchar(500) NOT NULL,
+  `fpLink` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `form_proposal`
+--
+
+INSERT INTO `form_proposal` (`fpID`, `fpTitle`, `fpDescription`, `fpLink`) VALUES
+(20180001, 'What is the title of the video', 'My Father', ''),
+(20180002, 'Who is the name of the character in the story?', 'Ben', ''),
+(20240003, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'hv,kv', ''),
+(20240004, 'fnjhn', 'fhhhhhhh', ''),
+(20240005, '', '', ''),
+(20240006, '', '', ''),
+(20240007, '', '', '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `in_ext_com`
 --
 
 CREATE TABLE `in_ext_com` (
   `in_ext_com_ID` int(11) NOT NULL,
   `in_ext_com_title` varchar(500) NOT NULL,
-  `in_ext_com_desc` varchar(500) NOT NULL,
+  `in_ext_com_sender` varchar(500) NOT NULL,
   `in_ext_com_FileLocation` text NOT NULL,
-  `in_ext_com_year` year(4) NOT NULL
+  `in_ext_com_dateReceived` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `in_ext_com`
 --
 
-INSERT INTO `in_ext_com` (`in_ext_com_ID`, `in_ext_com_title`, `in_ext_com_desc`, `in_ext_com_FileLocation`, `in_ext_com_year`) VALUES
-(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', 0000),
-(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', 0000);
+INSERT INTO `in_ext_com` (`in_ext_com_ID`, `in_ext_com_title`, `in_ext_com_sender`, `in_ext_com_FileLocation`, `in_ext_com_dateReceived`) VALUES
+(34, 'Off-Campus Activity', 'Mark Emerson B. Cuya', 'files/Desiree V. Obsequio.pdf', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `in_int_com`
+--
+
+CREATE TABLE `in_int_com` (
+  `in_int_com_ID` int(11) NOT NULL,
+  `in_int_com_title` varchar(500) NOT NULL,
+  `in_int_com_sender` varchar(500) NOT NULL,
+  `in_int_com_FileLocation` text NOT NULL,
+  `in_int_com_dateReceived` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `in_int_com`
+--
+
+INSERT INTO `in_int_com` (`in_int_com_ID`, `in_int_com_title`, `in_int_com_sender`, `in_int_com_FileLocation`, `in_int_com_dateReceived`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `memo_local`
+--
+
+CREATE TABLE `memo_local` (
+  `memo_local_ID` int(11) NOT NULL,
+  `memo_local_title` varchar(500) NOT NULL,
+  `memo_local_sender` varchar(500) NOT NULL,
+  `memo_local_FileLocation` text NOT NULL,
+  `memo_local_dateReceived` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `memo_local`
+--
+
+INSERT INTO `memo_local` (`memo_local_ID`, `memo_local_title`, `memo_local_sender`, `memo_local_FileLocation`, `memo_local_dateReceived`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `memo_oca`
+--
+
+CREATE TABLE `memo_oca` (
+  `memo_oca_ID` int(11) NOT NULL,
+  `memo_oca_title` varchar(500) NOT NULL,
+  `memo_oca_sender` varchar(500) NOT NULL,
+  `memo_oca_FileLocation` text NOT NULL,
+  `memo_oca_dateReceived` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `memo_oca`
+--
+
+INSERT INTO `memo_oca` (`memo_oca_ID`, `memo_oca_title`, `memo_oca_sender`, `memo_oca_FileLocation`, `memo_oca_dateReceived`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `memo_op`
+--
+
+CREATE TABLE `memo_op` (
+  `memo_op_ID` int(11) NOT NULL,
+  `memo_op_title` varchar(500) NOT NULL,
+  `memo_op_sender` varchar(500) NOT NULL,
+  `memo_op_FileLocation` text NOT NULL,
+  `memo_op_dateReceived` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `memo_op`
+--
+
+INSERT INTO `memo_op` (`memo_op_ID`, `memo_op_title`, `memo_op_sender`, `memo_op_FileLocation`, `memo_op_dateReceived`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `memo_others`
+--
+
+CREATE TABLE `memo_others` (
+  `memo_others_ID` int(11) NOT NULL,
+  `memo_others_title` varchar(500) NOT NULL,
+  `memo_others_sender` varchar(500) NOT NULL,
+  `memo_others_FileLocation` text NOT NULL,
+  `memo_others_dateReceived` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `memo_others`
+--
+
+INSERT INTO `memo_others` (`memo_others_ID`, `memo_others_title`, `memo_others_sender`, `memo_others_FileLocation`, `memo_others_dateReceived`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `memo_ovpri`
+--
+
+CREATE TABLE `memo_ovpri` (
+  `memo_ovpri_ID` int(11) NOT NULL,
+  `memo_ovpri_title` varchar(500) NOT NULL,
+  `memo_ovpri_sender` varchar(500) NOT NULL,
+  `memo_ovpri_FileLocation` text NOT NULL,
+  `memo_ovpri_dateReceived` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `memo_ovpri`
+--
+
+INSERT INTO `memo_ovpri` (`memo_ovpri_ID`, `memo_ovpri_title`, `memo_ovpri_sender`, `memo_ovpri_FileLocation`, `memo_ovpri_dateReceived`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `out_ext_com`
+--
+
+CREATE TABLE `out_ext_com` (
+  `out_ext_com_ID` int(11) NOT NULL,
+  `out_ext_com_title` varchar(500) NOT NULL,
+  `out_ext_com_receiver` varchar(500) NOT NULL,
+  `out_ext_com_FileLocation` text NOT NULL,
+  `out_ext_com_dateSent` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `out_ext_com`
+--
+
+INSERT INTO `out_ext_com` (`out_ext_com_ID`, `out_ext_com_title`, `out_ext_com_receiver`, `out_ext_com_FileLocation`, `out_ext_com_dateSent`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `out_int_com`
+--
+
+CREATE TABLE `out_int_com` (
+  `out_int_com_ID` int(11) NOT NULL,
+  `out_int_com_title` varchar(500) NOT NULL,
+  `out_int_com_receiver` varchar(500) NOT NULL,
+  `out_int_com_FileLocation` text NOT NULL,
+  `out_int_com_dateSent` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `out_int_com`
+--
+
+INSERT INTO `out_int_com` (`out_int_com_ID`, `out_int_com_title`, `out_int_com_receiver`, `out_int_com_FileLocation`, `out_int_com_dateSent`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', '0000-00-00'),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reports`
+--
+
+CREATE TABLE `reports` (
+  `reportID` int(11) NOT NULL,
+  `reportTitle` varchar(500) NOT NULL,
+  `reportDescription` varchar(500) NOT NULL,
+  `reportYear` year(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rf_citation`
+--
+
+CREATE TABLE `rf_citation` (
+  `rf_citation_ID` int(11) NOT NULL,
+  `rf_citation_title` varchar(500) NOT NULL,
+  `rf_citation_desc` varchar(500) NOT NULL,
+  `rf_citation_FileLocation` text NOT NULL,
+  `rf_citation_yearUploaded` year(4) NOT NULL,
+  `rf_citation_remarks` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rf_citation`
+--
+
+INSERT INTO `rf_citation` (`rf_citation_ID`, `rf_citation_title`, `rf_citation_desc`, `rf_citation_FileLocation`, `rf_citation_yearUploaded`, `rf_citation_remarks`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', 2018, ''),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', 2022, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rf_completed`
+--
+
+CREATE TABLE `rf_completed` (
+  `rf_completed_ID` int(11) NOT NULL,
+  `rf_completed_title` varchar(500) NOT NULL,
+  `rf_completed_desc` varchar(500) NOT NULL,
+  `rf_completed_FileLocation` text NOT NULL,
+  `rf_completed_yearUploaded` year(4) NOT NULL,
+  `rf_completed_remarks` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rf_completed`
+--
+
+INSERT INTO `rf_completed` (`rf_completed_ID`, `rf_completed_title`, `rf_completed_desc`, `rf_completed_FileLocation`, `rf_completed_yearUploaded`, `rf_completed_remarks`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', 2018, ''),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', 2022, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rf_ongoing`
+--
+
+CREATE TABLE `rf_ongoing` (
+  `rf_ongoing_ID` int(11) NOT NULL,
+  `rf_ongoing_title` varchar(500) NOT NULL,
+  `rf_ongoing_desc` varchar(500) NOT NULL,
+  `rf_ongoing_FileLocation` text NOT NULL,
+  `rf_ongoing_yearUploaded` year(4) NOT NULL,
+  `rf_ongoing_remarks` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rf_ongoing`
+--
+
+INSERT INTO `rf_ongoing` (`rf_ongoing_ID`, `rf_ongoing_title`, `rf_ongoing_desc`, `rf_ongoing_FileLocation`, `rf_ongoing_yearUploaded`, `rf_ongoing_remarks`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', 2018, ''),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', 2022, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rf_proposal`
+--
+
+CREATE TABLE `rf_proposal` (
+  `rf_proposal_ID` int(11) NOT NULL,
+  `rf_proposal_title` varchar(500) NOT NULL,
+  `rf_proposal_desc` varchar(500) NOT NULL,
+  `rf_proposal_FileLocation` text NOT NULL,
+  `rf_proposal_yearUploaded` year(4) NOT NULL,
+  `rf_proposal_remarks` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rf_proposal`
+--
+
+INSERT INTO `rf_proposal` (`rf_proposal_ID`, `rf_proposal_title`, `rf_proposal_desc`, `rf_proposal_FileLocation`, `rf_proposal_yearUploaded`, `rf_proposal_remarks`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', 2018, ''),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', 2022, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rf_published`
+--
+
+CREATE TABLE `rf_published` (
+  `rf_published_ID` int(11) NOT NULL,
+  `rf_published_title` varchar(500) NOT NULL,
+  `rf_published_desc` varchar(500) NOT NULL,
+  `rf_published_FileLocation` text NOT NULL,
+  `rf_published_yearUploaded` year(4) NOT NULL,
+  `rf_published_remarks` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rf_published`
+--
+
+INSERT INTO `rf_published` (`rf_published_ID`, `rf_published_title`, `rf_published_desc`, `rf_published_FileLocation`, `rf_published_yearUploaded`, `rf_published_remarks`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', 2018, ''),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', 2022, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rf_utilization`
+--
+
+CREATE TABLE `rf_utilization` (
+  `rf_utilization_ID` int(11) NOT NULL,
+  `rf_utilization_title` varchar(500) NOT NULL,
+  `rf_utilization_desc` varchar(500) NOT NULL,
+  `rf_utilization_FileLocation` text NOT NULL,
+  `rf_utilization_yearUploaded` year(4) NOT NULL,
+  `rf_utilization_remarks` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rf_utilization`
+--
+
+INSERT INTO `rf_utilization` (`rf_utilization_ID`, `rf_utilization_title`, `rf_utilization_desc`, `rf_utilization_FileLocation`, `rf_utilization_yearUploaded`, `rf_utilization_remarks`) VALUES
+(30, 'fhgf', 'hth', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(31, 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit', 'files/Desiree V. Obsequio.pdf', 0000, ''),
+(32, 'ddhldibc', 'dcbcidlk ', 'files/Desiree V. Obsequio.pdf', 2018, ''),
+(33, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, ves', 'files/z-table example.pdf', 2022, '');
 
 -- --------------------------------------------------------
 
@@ -70,158 +502,6 @@ INSERT INTO `tblautonumbers` (`AUTOID`, `AUTOSTART`, `AUTOEND`, `AUTOINC`, `AUTO
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblexercise`
---
-
-CREATE TABLE `tblexercise` (
-  `ExerciseID` int(11) NOT NULL,
-  `LessonID` int(11) NOT NULL,
-  `Question` text NOT NULL,
-  `ChoiceA` text NOT NULL,
-  `ChoiceB` text NOT NULL,
-  `ChoiceC` text NOT NULL,
-  `ChoiceD` text NOT NULL,
-  `Answer` varchar(90) NOT NULL,
-  `ExercisesDate` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tblexercise`
---
-
-INSERT INTO `tblexercise` (`ExerciseID`, `LessonID`, `Question`, `ChoiceA`, `ChoiceB`, `ChoiceC`, `ChoiceD`, `Answer`, `ExercisesDate`) VALUES
-(20180001, 6, 'What is the title of the video', 'My Father', 'My Mother', 'My Brother', 'My Sister', 'My Father', '0000-00-00'),
-(20180002, 6, 'Who is the name of the character in the story?', 'Ben', 'Holly', 'Gaston', 'Wise old elf', 'd', '0000-00-00'),
-(20240003, 16, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', 'hv,kv', 'tdcf', 'jhfmv', 'fmc', 'fmc', '0000-00-00'),
-(20240004, 19, 'fnjhn', 'fhhhhhhh', 'hhhhhh', 'gttttttttttffffffffff', 'ddddddddddddd', 'hhhhhh', '0000-00-00'),
-(20240005, 0, '', '', '', '', '', '', '0000-00-00'),
-(20240006, 0, '', '', '', '', '', '', '0000-00-00'),
-(20240007, 0, '', '', '', '', '', '', '0000-00-00');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tblscore`
---
-
-CREATE TABLE `tblscore` (
-  `ScoreID` int(11) NOT NULL,
-  `LessonID` int(11) NOT NULL,
-  `ExerciseID` int(11) NOT NULL,
-  `StudentID` int(11) NOT NULL,
-  `NoItems` int(11) NOT NULL DEFAULT 1,
-  `Score` int(11) NOT NULL,
-  `Submitted` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tblscore`
---
-
-INSERT INTO `tblscore` (`ScoreID`, `LessonID`, `ExerciseID`, `StudentID`, `NoItems`, `Score`, `Submitted`) VALUES
-(9, 6, 20180001, 1, 1, 1, 1),
-(10, 6, 20180002, 1, 1, 1, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tblstudent`
---
-
-CREATE TABLE `tblstudent` (
-  `StudentID` int(11) NOT NULL,
-  `Fname` varchar(90) NOT NULL,
-  `Lname` varchar(90) NOT NULL,
-  `Address` varchar(90) NOT NULL,
-  `MobileNo` varchar(90) NOT NULL,
-  `STUDUSERNAME` varchar(90) NOT NULL,
-  `STUDPASS` varchar(90) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tblstudent`
---
-
-INSERT INTO `tblstudent` (`StudentID`, `Fname`, `Lname`, `Address`, `MobileNo`, `STUDUSERNAME`, `STUDPASS`) VALUES
-(1, 'a', 'a', 'a', '21', 'a', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8'),
-(2, 'sd', 'sad', 'sad', '231', 'a', 'a0f1490a20d0211c997b44bc357e1972deab8ae3'),
-(3, 'dfghj', 'vbj', 'dgfhghmm', '13456789', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997'),
-(4, 'ythrgtrfdeaa', 'iuytr', 'oiuyt', '09916685763', 'admin1', '6c7ca345f63f835cb353ff15bd6c5e052ec08e7a'),
-(5, 'ythrgtrfdeaa', 'iuytr', 'oiuyt', '098765433334', 'admin1', '6c7ca345f63f835cb353ff15bd6c5e052ec08e7a'),
-(6, 'ythrgtrfdeaa', 'iuytr', 'oiuyt', '09876543456', 'Admin3', 'd4d6858c1e2245abfa696dcdf8878fdda822d9bb'),
-(7, 'ythrgtrfdeaa', 'iuytr', 'oiuyt', '09876543456', 'Admin3', 'd4d6858c1e2245abfa696dcdf8878fdda822d9bb'),
-(8, 'wertyu', 'dfghj', 'fdfdfrtyj', '098765456', 'adminn', 'd8ed7457a3464c783a4485c5173c8adce2210c1a');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tblstudentquestion`
---
-
-CREATE TABLE `tblstudentquestion` (
-  `SQID` int(11) NOT NULL,
-  `ExerciseID` int(11) NOT NULL,
-  `LessonID` int(11) NOT NULL,
-  `StudentID` int(11) NOT NULL,
-  `Question` varchar(90) NOT NULL,
-  `CA` varchar(90) NOT NULL,
-  `CB` varchar(90) NOT NULL,
-  `CC` varchar(90) NOT NULL,
-  `CD` varchar(90) NOT NULL,
-  `QA` varchar(90) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tblstudentquestion`
---
-
-INSERT INTO `tblstudentquestion` (`SQID`, `ExerciseID`, `LessonID`, `StudentID`, `Question`, `CA`, `CB`, `CC`, `CD`, `QA`) VALUES
-(1, 20180002, 0, 1, 'Who is the name of the character in the story?', 'Ben', 'Holly', 'Gaston', 'Wise old elf', 'Gaston'),
-(2, 20180002, 0, 2, 'Who is the name of the character in the story?', 'Ben', 'Holly', 'Gaston', 'Wise old elf', 'Gaston'),
-(3, 20240003, 0, 1, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in', 'hv,kv', 'tdcf', 'jhfmv', 'fmc', 'fmc'),
-(4, 20240003, 0, 2, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in', 'hv,kv', 'tdcf', 'jhfmv', 'fmc', 'fmc'),
-(5, 20240003, 0, 3, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in', 'hv,kv', 'tdcf', 'jhfmv', 'fmc', 'fmc'),
-(6, 20240003, 0, 4, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in', 'hv,kv', 'tdcf', 'jhfmv', 'fmc', 'fmc'),
-(7, 20240003, 0, 5, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in', 'hv,kv', 'tdcf', 'jhfmv', 'fmc', 'fmc'),
-(8, 20240003, 0, 6, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in', 'hv,kv', 'tdcf', 'jhfmv', 'fmc', 'fmc'),
-(9, 20240003, 0, 7, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in', 'hv,kv', 'tdcf', 'jhfmv', 'fmc', 'fmc'),
-(10, 20240003, 0, 8, 'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in', 'hv,kv', 'tdcf', 'jhfmv', 'fmc', 'fmc'),
-(11, 20240004, 0, 1, 'fnjhn', 'fhhhhhhh', 'hhhhhh', 'gttttttttttffffffffff', 'ddddddddddddd', 'hhhhhh'),
-(12, 20240004, 0, 2, 'fnjhn', 'fhhhhhhh', 'hhhhhh', 'gttttttttttffffffffff', 'ddddddddddddd', 'hhhhhh'),
-(13, 20240004, 0, 3, 'fnjhn', 'fhhhhhhh', 'hhhhhh', 'gttttttttttffffffffff', 'ddddddddddddd', 'hhhhhh'),
-(14, 20240004, 0, 4, 'fnjhn', 'fhhhhhhh', 'hhhhhh', 'gttttttttttffffffffff', 'ddddddddddddd', 'hhhhhh'),
-(15, 20240004, 0, 5, 'fnjhn', 'fhhhhhhh', 'hhhhhh', 'gttttttttttffffffffff', 'ddddddddddddd', 'hhhhhh'),
-(16, 20240004, 0, 6, 'fnjhn', 'fhhhhhhh', 'hhhhhh', 'gttttttttttffffffffff', 'ddddddddddddd', 'hhhhhh'),
-(17, 20240004, 0, 7, 'fnjhn', 'fhhhhhhh', 'hhhhhh', 'gttttttttttffffffffff', 'ddddddddddddd', 'hhhhhh'),
-(18, 20240004, 0, 8, 'fnjhn', 'fhhhhhhh', 'hhhhhh', 'gttttttttttffffffffff', 'ddddddddddddd', 'hhhhhh'),
-(19, 20240005, 0, 1, '', '', '', '', '', ''),
-(20, 20240005, 0, 2, '', '', '', '', '', ''),
-(21, 20240005, 0, 3, '', '', '', '', '', ''),
-(22, 20240005, 0, 4, '', '', '', '', '', ''),
-(23, 20240005, 0, 5, '', '', '', '', '', ''),
-(24, 20240005, 0, 6, '', '', '', '', '', ''),
-(25, 20240005, 0, 7, '', '', '', '', '', ''),
-(26, 20240005, 0, 8, '', '', '', '', '', ''),
-(27, 20240006, 0, 1, '', '', '', '', '', ''),
-(28, 20240006, 0, 2, '', '', '', '', '', ''),
-(29, 20240006, 0, 3, '', '', '', '', '', ''),
-(30, 20240006, 0, 4, '', '', '', '', '', ''),
-(31, 20240006, 0, 5, '', '', '', '', '', ''),
-(32, 20240006, 0, 6, '', '', '', '', '', ''),
-(33, 20240006, 0, 7, '', '', '', '', '', ''),
-(34, 20240006, 0, 8, '', '', '', '', '', ''),
-(35, 20240007, 0, 1, '', '', '', '', '', ''),
-(36, 20240007, 0, 2, '', '', '', '', '', ''),
-(37, 20240007, 0, 3, '', '', '', '', '', ''),
-(38, 20240007, 0, 4, '', '', '', '', '', ''),
-(39, 20240007, 0, 5, '', '', '', '', '', ''),
-(40, 20240007, 0, 6, '', '', '', '', '', ''),
-(41, 20240007, 0, 7, '', '', '', '', '', ''),
-(42, 20240007, 0, 8, '', '', '', '', '', '');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tblusers`
 --
 
@@ -246,40 +526,124 @@ INSERT INTO `tblusers` (`USERID`, `NAME`, `UEMAIL`, `PASS`, `TYPE`) VALUES
 --
 
 --
+-- Indexes for table `form_completed`
+--
+ALTER TABLE `form_completed`
+  ADD PRIMARY KEY (`fcID`);
+
+--
+-- Indexes for table `form_monitoring`
+--
+ALTER TABLE `form_monitoring`
+  ADD PRIMARY KEY (`fmID`);
+
+--
+-- Indexes for table `form_proposal`
+--
+ALTER TABLE `form_proposal`
+  ADD PRIMARY KEY (`fpID`);
+
+--
 -- Indexes for table `in_ext_com`
 --
 ALTER TABLE `in_ext_com`
   ADD PRIMARY KEY (`in_ext_com_ID`);
 
 --
+-- Indexes for table `in_int_com`
+--
+ALTER TABLE `in_int_com`
+  ADD PRIMARY KEY (`in_int_com_ID`);
+
+--
+-- Indexes for table `memo_local`
+--
+ALTER TABLE `memo_local`
+  ADD PRIMARY KEY (`memo_local_ID`);
+
+--
+-- Indexes for table `memo_oca`
+--
+ALTER TABLE `memo_oca`
+  ADD PRIMARY KEY (`memo_oca_ID`);
+
+--
+-- Indexes for table `memo_op`
+--
+ALTER TABLE `memo_op`
+  ADD PRIMARY KEY (`memo_op_ID`);
+
+--
+-- Indexes for table `memo_others`
+--
+ALTER TABLE `memo_others`
+  ADD PRIMARY KEY (`memo_others_ID`);
+
+--
+-- Indexes for table `memo_ovpri`
+--
+ALTER TABLE `memo_ovpri`
+  ADD PRIMARY KEY (`memo_ovpri_ID`);
+
+--
+-- Indexes for table `out_ext_com`
+--
+ALTER TABLE `out_ext_com`
+  ADD PRIMARY KEY (`out_ext_com_ID`);
+
+--
+-- Indexes for table `out_int_com`
+--
+ALTER TABLE `out_int_com`
+  ADD PRIMARY KEY (`out_int_com_ID`);
+
+--
+-- Indexes for table `reports`
+--
+ALTER TABLE `reports`
+  ADD PRIMARY KEY (`reportID`);
+
+--
+-- Indexes for table `rf_citation`
+--
+ALTER TABLE `rf_citation`
+  ADD PRIMARY KEY (`rf_citation_ID`);
+
+--
+-- Indexes for table `rf_completed`
+--
+ALTER TABLE `rf_completed`
+  ADD PRIMARY KEY (`rf_completed_ID`);
+
+--
+-- Indexes for table `rf_ongoing`
+--
+ALTER TABLE `rf_ongoing`
+  ADD PRIMARY KEY (`rf_ongoing_ID`);
+
+--
+-- Indexes for table `rf_proposal`
+--
+ALTER TABLE `rf_proposal`
+  ADD PRIMARY KEY (`rf_proposal_ID`);
+
+--
+-- Indexes for table `rf_published`
+--
+ALTER TABLE `rf_published`
+  ADD PRIMARY KEY (`rf_published_ID`);
+
+--
+-- Indexes for table `rf_utilization`
+--
+ALTER TABLE `rf_utilization`
+  ADD PRIMARY KEY (`rf_utilization_ID`);
+
+--
 -- Indexes for table `tblautonumbers`
 --
 ALTER TABLE `tblautonumbers`
   ADD PRIMARY KEY (`AUTOID`);
-
---
--- Indexes for table `tblexercise`
---
-ALTER TABLE `tblexercise`
-  ADD PRIMARY KEY (`ExerciseID`);
-
---
--- Indexes for table `tblscore`
---
-ALTER TABLE `tblscore`
-  ADD PRIMARY KEY (`ScoreID`);
-
---
--- Indexes for table `tblstudent`
---
-ALTER TABLE `tblstudent`
-  ADD PRIMARY KEY (`StudentID`) USING BTREE;
-
---
--- Indexes for table `tblstudentquestion`
---
-ALTER TABLE `tblstudentquestion`
-  ADD PRIMARY KEY (`SQID`);
 
 --
 -- Indexes for table `tblusers`
@@ -292,40 +656,124 @@ ALTER TABLE `tblusers`
 --
 
 --
+-- AUTO_INCREMENT for table `form_completed`
+--
+ALTER TABLE `form_completed`
+  MODIFY `fcID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20240008;
+
+--
+-- AUTO_INCREMENT for table `form_monitoring`
+--
+ALTER TABLE `form_monitoring`
+  MODIFY `fmID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20240008;
+
+--
+-- AUTO_INCREMENT for table `form_proposal`
+--
+ALTER TABLE `form_proposal`
+  MODIFY `fpID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20240008;
+
+--
 -- AUTO_INCREMENT for table `in_ext_com`
 --
 ALTER TABLE `in_ext_com`
-  MODIFY `in_ext_com_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `in_ext_com_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `in_int_com`
+--
+ALTER TABLE `in_int_com`
+  MODIFY `in_int_com_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `memo_local`
+--
+ALTER TABLE `memo_local`
+  MODIFY `memo_local_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `memo_oca`
+--
+ALTER TABLE `memo_oca`
+  MODIFY `memo_oca_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `memo_op`
+--
+ALTER TABLE `memo_op`
+  MODIFY `memo_op_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `memo_others`
+--
+ALTER TABLE `memo_others`
+  MODIFY `memo_others_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `memo_ovpri`
+--
+ALTER TABLE `memo_ovpri`
+  MODIFY `memo_ovpri_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `out_ext_com`
+--
+ALTER TABLE `out_ext_com`
+  MODIFY `out_ext_com_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `out_int_com`
+--
+ALTER TABLE `out_int_com`
+  MODIFY `out_int_com_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `reports`
+--
+ALTER TABLE `reports`
+  MODIFY `reportID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `rf_citation`
+--
+ALTER TABLE `rf_citation`
+  MODIFY `rf_citation_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `rf_completed`
+--
+ALTER TABLE `rf_completed`
+  MODIFY `rf_completed_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `rf_ongoing`
+--
+ALTER TABLE `rf_ongoing`
+  MODIFY `rf_ongoing_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `rf_proposal`
+--
+ALTER TABLE `rf_proposal`
+  MODIFY `rf_proposal_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `rf_published`
+--
+ALTER TABLE `rf_published`
+  MODIFY `rf_published_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `rf_utilization`
+--
+ALTER TABLE `rf_utilization`
+  MODIFY `rf_utilization_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `tblautonumbers`
 --
 ALTER TABLE `tblautonumbers`
   MODIFY `AUTOID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `tblexercise`
---
-ALTER TABLE `tblexercise`
-  MODIFY `ExerciseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20240008;
-
---
--- AUTO_INCREMENT for table `tblscore`
---
-ALTER TABLE `tblscore`
-  MODIFY `ScoreID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `tblstudent`
---
-ALTER TABLE `tblstudent`
-  MODIFY `StudentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `tblstudentquestion`
---
-ALTER TABLE `tblstudentquestion`
-  MODIFY `SQID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `tblusers`

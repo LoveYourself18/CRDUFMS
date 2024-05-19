@@ -38,12 +38,12 @@ switch ($action) {
 
 			$lesson = new Lesson();
 			$lesson->in_ext_com_title = $chapter;
-			$lesson->in_ext_com_desc   = $title;
+			$lesson->in_ext_com_sender   = $title;
 			$lesson->in_ext_com_FileLocation  = $location;
-			$lesson->in_ext_com_year  = $category;
+			$lesson->in_ext_com_dateReceived  = $category;
 			$lesson->create(); 
 
-			message("Lesson has been saved in the database.", "success");
+			message("File has been saved in the database.", "success");
 			redirect("index.php");
 			
 		}  
@@ -62,8 +62,8 @@ switch ($action) {
 
 				$lesson = new Lesson();
 				$lesson->in_ext_com_title = $chapter;
-				$lesson->in_ext_com_desc   = $title;
-				$lesson->in_ext_com_year  = $category;
+				$lesson->in_ext_com_sender   = $title;
+				$lesson->in_ext_com_dateReceived  = $category;
 				// $lesson->FileLocation  = $location;
 				$lesson->update($id); 
 

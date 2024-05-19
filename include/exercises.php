@@ -1,7 +1,7 @@
 <?php
 require_once(LIB_PATH.DS.'database.php');
 class Exercise {
-	protected static  $tblname = "tblexercise";
+	protected static  $tblname = "form_proposal";
 
 	function dbfields () {
 		global $mydb;
@@ -15,7 +15,7 @@ class Exercise {
 	function find_exercise($id="",$category=""){
 		global $mydb;
 		$mydb->setQuery("SELECT * FROM ".self::$tblname." 
-			WHERE ExerciseID = {$id} OR Category = '{$category}'");
+			WHERE fpID = {$id} OR Category = '{$category}'");
 		$cur = $mydb->executeQuery();
 		$row_count = $mydb->num_rows($cur);
 		return $row_count;
@@ -24,7 +24,7 @@ class Exercise {
 	function single_exercise($id=""){
 			global $mydb;
 			$mydb->setQuery("SELECT * FROM ".self::$tblname." 
-				Where ExerciseID= '{$id}' LIMIT 1");
+				Where fpID= '{$id}' LIMIT 1");
 			$cur = $mydb->loadSingleResult();
 			return $cur;
 	}

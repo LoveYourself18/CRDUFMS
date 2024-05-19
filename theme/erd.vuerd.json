@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -537.599999999999,
-    "scrollLeft": -374.40000000000055,
-    "zoomLevel": 0.9,
+    "scrollTop": -646.5338999999991,
+    "scrollLeft": -298,
+    "zoomLevel": 0.6,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -45,6 +45,7 @@
   "table": {
     "tables": [
       {
+        "id": "98ee9159-befb-4140-b8b6-6b4e9f9ea0fb",
         "name": "tblautonumbers",
         "comment": "",
         "columns": [
@@ -168,14 +169,14 @@
           "active": false,
           "left": 288.7266,
           "top": 783.1665,
-          "zIndex": 3,
+          "zIndex": 2,
           "widthName": 91.60986328125,
           "widthComment": 60
         },
-        "visible": true,
-        "id": "98ee9159-befb-4140-b8b6-6b4e9f9ea0fb"
+        "visible": true
       },
       {
+        "id": "76303b5d-8546-4700-9e5c-c89af54cec74",
         "name": "tbllesson",
         "comment": "",
         "columns": [
@@ -276,14 +277,14 @@
           "active": false,
           "left": 1375.121,
           "top": 1345.8283,
-          "zIndex": 6,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 60
         },
-        "visible": true,
-        "id": "76303b5d-8546-4700-9e5c-c89af54cec74"
+        "visible": true
       },
       {
+        "id": "0af94068-628e-4761-8be2-a88bec85d4e1",
         "name": "tblusers",
         "comment": "",
         "columns": [
@@ -407,14 +408,14 @@
           "active": false,
           "left": 297.7987,
           "top": 523.6275,
-          "zIndex": 5,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60
         },
-        "visible": true,
-        "id": "0af94068-628e-4761-8be2-a88bec85d4e1"
+        "visible": true
       },
       {
+        "id": "04d57f10-be26-4052-8d65-f75e002e20a3",
         "name": "tblscore",
         "comment": "",
         "columns": [
@@ -442,6 +443,7 @@
             }
           },
           {
+            "id": "e0f3563c-4b30-4da0-bb22-a24b490a68e0",
             "name": "LessonID",
             "comment": "",
             "dataType": "int(11)",
@@ -461,10 +463,10 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "e0f3563c-4b30-4da0-bb22-a24b490a68e0"
+            }
           },
           {
+            "id": "446a31ae-7278-4dbe-8c53-e33dbdbe6b6e",
             "name": "ExerciseID",
             "comment": "",
             "dataType": "int(11)",
@@ -484,10 +486,10 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "446a31ae-7278-4dbe-8c53-e33dbdbe6b6e"
+            }
           },
           {
+            "id": "ea05bfeb-e6a2-4ede-8c4c-62ec668fd5d4",
             "name": "StudentID",
             "comment": "",
             "dataType": "int(11)",
@@ -507,8 +509,7 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "ea05bfeb-e6a2-4ede-8c4c-62ec668fd5d4"
+            }
           },
           {
             "id": "6eef94ec-ad2f-4958-bb53-4c93bb96f868",
@@ -584,14 +585,14 @@
           "active": false,
           "left": 505.2334,
           "top": 1052.4824,
-          "zIndex": 4,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 60
         },
-        "visible": true,
-        "id": "04d57f10-be26-4052-8d65-f75e002e20a3"
+        "visible": true
       },
       {
+        "id": "d97a1e34-cad2-4a1b-a465-1cae9df7cd6e",
         "name": "tblstudent",
         "comment": "",
         "columns": [
@@ -761,14 +762,14 @@
           "active": false,
           "left": 735.3766573746054,
           "top": 675.0795558006762,
-          "zIndex": 11,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
-        "visible": true,
-        "id": "d97a1e34-cad2-4a1b-a465-1cae9df7cd6e"
+        "visible": true
       },
       {
+        "id": "a34306a2-1ec9-4097-901b-d23740f5feb5",
         "name": "tblexercise",
         "comment": "",
         "columns": [
@@ -796,6 +797,7 @@
             }
           },
           {
+            "id": "8bcde8f6-0919-4d97-9826-600cec27b33d",
             "name": "LessonID",
             "comment": "",
             "dataType": "int(11)",
@@ -815,8 +817,7 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "8bcde8f6-0919-4d97-9826-600cec27b33d"
+            }
           },
           {
             "id": "e38c2d1b-f3c4-4661-9cfd-21c421697465",
@@ -984,14 +985,14 @@
           "active": false,
           "left": 1041.8486,
           "top": 970.389,
-          "zIndex": 7,
+          "zIndex": 6,
           "widthName": 64.13720703125,
           "widthComment": 60
         },
-        "visible": true,
-        "id": "a34306a2-1ec9-4097-901b-d23740f5feb5"
+        "visible": true
       },
       {
+        "id": "b414fde1-d63d-4ce7-9c10-78bd2a984b1d",
         "name": "tblstudentquestion",
         "comment": "",
         "columns": [
@@ -1019,6 +1020,7 @@
             }
           },
           {
+            "id": "8df547c7-6e80-494a-8948-31951c188ca4",
             "name": "ExerciseID",
             "comment": "",
             "dataType": "int(11)",
@@ -1038,10 +1040,10 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "8df547c7-6e80-494a-8948-31951c188ca4"
+            }
           },
           {
+            "id": "0f6a08e1-e090-465f-8954-d98174072a3b",
             "name": "StudentID",
             "comment": "",
             "dataType": "int(11)",
@@ -1061,10 +1063,10 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "0f6a08e1-e090-465f-8954-d98174072a3b"
+            }
           },
           {
+            "id": "3c0799ba-f840-4e51-abb3-b5ed710db72f",
             "name": "LessonID",
             "comment": "",
             "dataType": "int(11)",
@@ -1084,8 +1086,7 @@
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
-            },
-            "id": "3c0799ba-f840-4e51-abb3-b5ed710db72f"
+            }
           },
           {
             "id": "837dee80-f8f1-4a6d-bb48-9167e73d5d1c",
@@ -1230,12 +1231,11 @@
           "active": false,
           "left": 1385.525,
           "top": 672.8617,
-          "zIndex": 2,
+          "zIndex": 1,
           "widthName": 107.5234375,
           "widthComment": 60
         },
-        "visible": true,
-        "id": "b414fde1-d63d-4ce7-9c10-78bd2a984b1d"
+        "visible": true
       }
     ],
     "indexes": []
@@ -1246,6 +1246,7 @@
   "relationship": {
     "relationships": [
       {
+        "id": "fd5eb00e-4ad0-4bff-9ecf-aa13a90c3047",
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
@@ -1255,7 +1256,7 @@
             "19e22b92-449a-46dc-9a77-9b2c0594fccc"
           ],
           "x": 1375.121,
-          "y": 1459.0783,
+          "y": 1383.5783,
           "direction": "left"
         },
         "end": {
@@ -1268,10 +1269,10 @@
           "direction": "right"
         },
         "constraintName": "fk_tbllesson_to_tblscore",
-        "visible": true,
-        "id": "fd5eb00e-4ad0-4bff-9ecf-aa13a90c3047"
+        "visible": true
       },
       {
+        "id": "564d252f-46b1-494a-a166-b80c0c40d0f6",
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
@@ -1294,10 +1295,10 @@
           "direction": "bottom"
         },
         "constraintName": "fk_tbllesson_to_tblstudentquestion",
-        "visible": true,
-        "id": "564d252f-46b1-494a-a166-b80c0c40d0f6"
+        "visible": true
       },
       {
+        "id": "0860e241-5372-4512-be3c-ec30718bbfdf",
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
@@ -1320,10 +1321,10 @@
           "direction": "left"
         },
         "constraintName": "fk_tblstudent_to_tblstudentquestion",
-        "visible": true,
-        "id": "0860e241-5372-4512-be3c-ec30718bbfdf"
+        "visible": true
       },
       {
+        "id": "093d01e2-3cd3-4a97-840e-7d9cd81c61b6",
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
@@ -1346,10 +1347,10 @@
           "direction": "top"
         },
         "constraintName": "fk_tblstudent_to_tblscore",
-        "visible": true,
-        "id": "093d01e2-3cd3-4a97-840e-7d9cd81c61b6"
+        "visible": true
       },
       {
+        "id": "7d83f6e6-b441-45cf-b236-7fd4b2d901f0",
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
@@ -1372,10 +1373,10 @@
           "direction": "right"
         },
         "constraintName": "fk_tblexercise_to_tblscore",
-        "visible": true,
-        "id": "7d83f6e6-b441-45cf-b236-7fd4b2d901f0"
+        "visible": true
       },
       {
+        "id": "eac6e06e-d272-4e96-b156-cbd99be3cd01",
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
@@ -1385,7 +1386,7 @@
             "19e22b92-449a-46dc-9a77-9b2c0594fccc"
           ],
           "x": 1375.121,
-          "y": 1383.5783,
+          "y": 1459.0783,
           "direction": "left"
         },
         "end": {
@@ -1398,10 +1399,10 @@
           "direction": "bottom"
         },
         "constraintName": "fk_tbllesson_to_tblexercise",
-        "visible": true,
-        "id": "eac6e06e-d272-4e96-b156-cbd99be3cd01"
+        "visible": true
       },
       {
+        "id": "98200e5f-6e8c-4dea-ada6-c460f9604257",
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
@@ -1424,8 +1425,7 @@
           "direction": "bottom"
         },
         "constraintName": "fk_tblexercise_to_tblstudentquestion",
-        "visible": true,
-        "id": "98200e5f-6e8c-4dea-ada6-c460f9604257"
+        "visible": true
       }
     ]
   }

@@ -48,8 +48,8 @@ if (!isset($_SESSION['USERID'])) {
                             <thead>
                                 <tr>
                                     <th>Title</th>
-                                    <th>Description</th>
-                                    <th>Year Uploaded</th>
+                                    <th>Sender</th>
+                                    <th>Date Received</th>
                                     <th width="27%">Action</th>
                                 </tr>
                             </thead>
@@ -60,10 +60,11 @@ if (!isset($_SESSION['USERID'])) {
                                 foreach ($cur as $result) {
                                     echo '<tr>';
                                     echo '<td>' . $result->in_ext_com_title . '</td>';
-                                    echo '<td>' . $result->in_ext_com_desc . '</td>';
-                                    echo '<td>' . $result->in_ext_com_year . '</td>';
+                                    echo '<td>' . $result->in_ext_com_sender . '</td>';
+                                    echo '<td>' . $result->in_ext_com_dateReceived . '</td>';
+                                    $view = 'index.php?view=viewpdf&id=' . $result->in_ext_com_ID;
                                     echo '<td class="text d-flex gap-2">
-            <a title="View" href="' . $view . '" class="btn btn-outline-success w-30">View</a>
+            <a title="View" href="'.$view.'" target="_blank" class="btn btn-outline-success w-30">View</a>
             <a title="Edit" href="index.php?view=edit&id=' . $result->in_ext_com_ID . '" class="btn btn-outline-secondary w-30">Edit</a>
             <a title="Edit" href="index.php?view=uploadfile&id=' . $result->in_ext_com_ID . '" class="btn btn-outline-warning w-30">Change</a>
             <a title="Delete" href="controller.php?action=delete&id=' . $result->in_ext_com_ID . '" class="btn btn-outline-danger w-30">Delete</a>
@@ -94,14 +95,14 @@ if (!isset($_SESSION['USERID'])) {
                     <div class="col">
                         <label class="control-label" for="LessonChapter">Title</label>
                         <input name="deptid" type="hidden" value="">
-                        <input class="form-control input-sm" id="LessonChapter" name="LessonChapter" placeholder="Chapter" type="text" value="">
+                        <input class="form-control input-sm" id="LessonChapter" name="LessonChapter" placeholder="Title" type="text" value="">
                     </div>
                 </div>
                 <div class="row mb-3 align-items-end">
                     <div class="col">
-                        <label class="control-label" for="LessonTitle">Description</label>
+                        <label class="control-label" for="LessonTitle">Sender</label>
                         <input name="deptid" type="hidden" value="">
-                        <input class="form-control input-sm" id="LessonTitle" name="LessonTitle" placeholder="Title" type="text" value="">
+                        <input class="form-control input-sm" id="LessonTitle" name="LessonTitle" placeholder="Sender" type="text" value="">
                     </div>
                 </div>
                 <div class="mb-3">

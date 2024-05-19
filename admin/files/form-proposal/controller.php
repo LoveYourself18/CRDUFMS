@@ -22,47 +22,21 @@ switch ($action) {
 	}
    
 	function doInsert(){
-
-		global $mydb;
-
 		if(isset($_POST['save'])){
 
-			$autonum = new Autonumber();
-			$resauto = $autonum->set_autonumber('ExerciseID');
-			$ExerciseID  =date('Y').$resauto->AUTO;
- 
+
 			$exercise = New Exercise();  
-			$exercise->ExerciseID 			= $ExerciseID; 
-			$exercise->LessonID 			= $_POST['Lesson']; 
-			$exercise->Question				= $_POST['Question']; 
-			$exercise->Answer				= $_POST['Answer'];
-			$exercise->ChoiceA 				= $_POST['ChoiceA'];
-			$exercise->ChoiceB				= $_POST['ChoiceB']; 
-			$exercise->ChoiceC				= $_POST['ChoiceC']; 
-			$exercise->ChoiceD				= $_POST['ChoiceD']; 
+			$exercise->fpID 				= $_POST['ExerciseID']; 
+			$exercise->fpTitle				= $_POST['Question']; 
+			$exercise->fpDescription		= $_POST['Answer'];
+			$exercise->fpLink 				= $_POST['ChoiceA'];
 			$exercise->create(); 
 
-			$sql = "SELECT * FROM tblstudent";
-			$mydb->setQuery($sql);
-			$cur = $mydb->loadResultList();
-			foreach ($cur as $result) { 
-				$sql = "INSERT INTO tblstudentquestion (`ExerciseID`, `LessonID`, `StudentID`,`Question`, `CA`, `CB`, `CC`, `CD`, `QA`) 
-				VALUES ('".$ExerciseID."','".$_POST['LESSON']."','".$result->StudentID."','".$_POST['Question']."','".$_POST['ChoiceA']."','".$_POST['ChoiceB']."','".$_POST['ChoiceC']."','".$_POST['ChoiceD']."','".$_POST['Answer']."')";
-				$mydb->setQuery($sql);
-				$mydb->executeQuery();
-			}
-
-
-			$autonum = new Autonumber();
-			$autonum->auto_update('ExerciseID');
-
-
-			message("New Question created successfully!", "success");
+			message("File has been saved in the database.", "success");
 			redirect("index.php");
+			}
 		 
 		}
-
-	}
 
 	function doEdit(){
 		global $mydb;

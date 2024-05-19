@@ -42,7 +42,7 @@
                       <div class="col-md-10">
                         <input name="deptid" type="hidden" value="">
                          <input class="form-control input-sm" id="LessonTitle" name="LessonTitle" placeholder=
-                            "Title" type="text" value="<?php echo $res->in_ext_com_desc; ?>">
+                            "Title" type="text" value="<?php echo $res->in_ext_com_sender; ?>">
                       </div>
                     </div>
                   </div>

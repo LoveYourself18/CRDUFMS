@@ -24,7 +24,7 @@ if (!isset($_SESSION['USERID'])) {
                                 <path d="M12 5l0 14" />
                                 <path d="M5 12l14 0" />
                             </svg>
-                            Add new file
+                            Add new form
                         </a>
                         <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-simple" aria-label="Create new report">
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
@@ -65,31 +65,27 @@ if (!isset($_SESSION['USERID'])) {
                                 <tr>
                                     <th>Title</th>
                                     <th>Description</th>
-                                    <th>File Link</th>
                                     <th width="18.5%">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
                                 $mydb->setQuery(
-                                    'SELECT * FROM  `tbllesson`'
+                                    'SELECT * FROM  `form_proposal`'
                                 );
                                 $cur = $mydb->loadResultList();
                                 foreach ($cur as $result) {
                                     echo '<tr>';
                                     echo '<td>' .
-                                        $result->LessonChapter .
+                                        $result->fpTitle .
                                         '</td>';
                                     echo '<td>' .
-                                        $result->LessonTitle .
+                                        $result->fpDescription .
                                         '</td>';
                                     echo '<td class="text">
-                                            <a title="Edit" href="https://docs.google.com/document/d/1QO1hlgnAwIkDs4GGQOJdPhiO8pAY2K9-/edit?usp=sharing&ouid=101948365139068696149&rtpof=true&sd=true' . $result->LessonChapter . '" target="_blank" class="btn btn-outline-secondary w-30" >Edit</a>
-                            <a title="Change" href="index.php?view=uploadfile&id=' .
-                                        $result->LessonID .
-                                    '" class="btn btn-outline-warning w-30" >Change</a>
+                                            <a title="Edit" href="' . $result->fpLink . '" target="_blank" class="btn btn-outline-secondary w-30" >Edit</a>
                             			  					 <a title="Delete" href="controller.php?action=delete&id=' .
-                                        $result->LessonID .
+                                        $result->fpID .
                                     '" class="btn btn-outline-danger w-30" >Delete</a>
                                                     </a>
                                                     
@@ -111,7 +107,7 @@ if (!isset($_SESSION['USERID'])) {
         <div class="modal-content">
             <div class="modal-header">
                 <div class="modal-status bg-success"></div>
-                <h5 class="modal-title">Add new file</h5>
+                <h5 class="modal-title">Add new form</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form class="modal-body" action="controller.php?action=add" method="POST" enctype="multipart/form-data">
@@ -135,18 +131,6 @@ if (!isset($_SESSION['USERID'])) {
                         <input name="deptid" type="hidden" value="">
                         <input class="form-control input-sm" id="LessonTitle" name="LessonTitle" placeholder="Link" type="text" value="">
                     </div>
-                </div>
-                <div class="mb-3">
-                    <label class="control-label" for="Category">Select File Type:</label>
-                    <input name="deptid" type="hidden" value="">
-                    <select type="text" class="form-select" id="Category" name="Category" value="">
-                        <option>Docs</option>
-                        <option>Video</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label class="control-label" align="right" for="file">Upload File:</label>
-                    <input class="form-control" type="file" name="file" />
                 </div>
                 <div class="modal-footer">
                     <label class="col-md-2 control-label" for="idno"></label>
