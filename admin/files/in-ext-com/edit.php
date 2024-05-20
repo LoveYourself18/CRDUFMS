@@ -47,6 +47,15 @@
                     </div>
                   </div>
 
+                  <div class="form-group">
+                    <div class="col-md-11">
+                      <div class="col-md-10">
+                        <label for="date">Choose a date:</label>
+                        <input type="date" id="date" name="date" required value="<?php echo $res->in_ext_com_dateReceived; ?>">
+                      </div>
+                    </div>
+                  </div>
+
                   <!-- <div class="form-group">
                     <div class="col-md-11">
                       <label class="col-md-2 control-label" for=

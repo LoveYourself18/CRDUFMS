@@ -106,16 +106,8 @@ if (!isset($_SESSION['USERID'])) {
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="year">Select Year:</label>
-                    <select name="year" id="year">
-                        <?php
-                        $currentYear = date('Y');
-                        $startYear = 2010;
-                        for ($year = $currentYear; $year >= $startYear; $year--) {
-                            echo "<option value=\"$year\">$year</option>";
-                        }
-                        ?>
-                    </select>
+                    <label for="date">Choose a date:</label>
+        <input type="date" id="date" name="date" required>
                 </div>
                 <div class="mb-3">
                     <label class="control-label" align="right" for="file">Upload File:</label>

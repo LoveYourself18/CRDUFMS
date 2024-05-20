@@ -31,7 +31,7 @@ switch ($action) {
 
 			$chapter = $_POST['LessonChapter'];
 			$title  = $_POST['LessonTitle'];
-			$category = $_POST['year'];
+			$date = $_POST['date'];
 
 			$filename = UploadImage();
 			$location = "files/". $filename ;
@@ -40,7 +40,7 @@ switch ($action) {
 			$lesson->in_ext_com_title = $chapter;
 			$lesson->in_ext_com_sender   = $title;
 			$lesson->in_ext_com_FileLocation  = $location;
-			$lesson->in_ext_com_dateReceived  = $category;
+			$lesson->in_ext_com_dateReceived  = $date;
 			$lesson->create(); 
 
 			message("File has been saved in the database.", "success");
@@ -54,7 +54,7 @@ switch ($action) {
 			$chapter = $_POST['LessonChapter'];
 			$title  = $_POST['LessonTitle'];
 			$id = $_POST['LessonID'];
-			$category = $_POST['Category'];
+			$date = $_POST['date'];
 
  
 				// $filename = UploadImage();
@@ -63,11 +63,11 @@ switch ($action) {
 				$lesson = new Lesson();
 				$lesson->in_ext_com_title = $chapter;
 				$lesson->in_ext_com_sender   = $title;
-				$lesson->in_ext_com_dateReceived  = $category;
+				$lesson->in_ext_com_dateReceived  = $date;
 				// $lesson->FileLocation  = $location;
 				$lesson->update($id); 
 
-				message("Lesson has been saved in the database.", "success");
+				message("File has been saved in the database.", "success");
 				redirect("index.php");
 		 
 
@@ -84,7 +84,7 @@ switch ($action) {
 			$lesson = New Lesson();
 			$lesson->delete($id);
  
-			message("Lesson has been removed!","info");
+			message("File has been removed!","info");
 			redirect('index.php');
 		 
 		

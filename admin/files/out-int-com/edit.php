@@ -27,9 +27,9 @@
                       "LessonChapter">Title:</label>
 
                       <div class="col-md-10">
-                        <input name="LessonID" type="hidden" value="<?php echo $res->in_ext_com_ID; ?>">
+                        <input name="LessonID" type="hidden" value="<?php echo $res->out_int_com_ID; ?>">
                          <input class="form-control input-sm" id="LessonChapter" name="LessonChapter" placeholder=
-                            "Chapter" type="text" value="<?php echo $res->in_ext_com_title; ?>">
+                            "Chapter" type="text" value="<?php echo $res->out_int_com_title; ?>">
                       </div>
                     </div>
                   </div>
@@ -42,7 +42,19 @@
                       <div class="col-md-10">
                         <input name="deptid" type="hidden" value="">
                          <input class="form-control input-sm" id="LessonTitle" name="LessonTitle" placeholder=
-                            "Title" type="text" value="<?php echo $res->in_ext_com_sender; ?>">
+                            "Title" type="text" value="<?php echo $res->out_int_com_sender; ?>">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-md-11">
+                      <label class="col-md-2 control-label" for=
+                      "LessonTitle">Description:</label>
+
+                      <div class="col-md-10">
+                        <label for="date">Choose a date:</label>
+        <input type="date" id="date" name="date" required value="<?php echo $res->out_int_com_dateSent; ?>">
                       </div>
                     </div>
                   </div>
