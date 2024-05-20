@@ -129,19 +129,19 @@
                           MEMO
                         </a>
                         <div class="dropdown-menu">
-                          <a href="./cards.html" class="dropdown-item">
+                          <a href="<?php echo web_root; ?>admin/files/memo_op/index.php" class="dropdown-item">
                             OP
                           </a>
-                          <a href="./card-actions.html" class="dropdown-item">
+                          <a href="<?php echo web_root; ?>admin/files/memo_ovpri/index.php" class="dropdown-item">
                             OVPRI
                           </a>
-                          <a href="./cards-masonry.html" class="dropdown-item">
+                          <a href="<?php echo web_root; ?>admin/files/memo_oca/index.php" class="dropdown-item">
                             OCA
                           </a>
-                          <a href="./cards-masonry.html" class="dropdown-item">
+                          <a href="<?php echo web_root; ?>admin/files/memo_local/index.php" class="dropdown-item">
                             Local
                           </a>
-                          <a href="./cards-masonry.html" class="dropdown-item">
+                          <a href="<?php echo web_root; ?>admin/files/memo_others/index.php" class="dropdown-item">
                             Others
                           </a>
                         </div>
