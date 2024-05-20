@@ -13,7 +13,7 @@ if (!isset($_SESSION['USERID'])) {
                         General Files
                     </div>
                     <h2 class="page-title">
-                        Incoming External Communications
+                        Outgoing Internal Communications
                     </h2>
                 </div>
                 <div class="col-auto ms-auto d-print-none">
@@ -47,27 +47,27 @@ if (!isset($_SESSION['USERID'])) {
                         <table id="example" class="datatable-1 table table-striped table-bordered table-hover table-responsive" style="font-size:12px" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Title</th>
-                                    <th>Sender</th>
-                                    <th>Date Received</th>
-                                    <th width="27%">Action</th>
+                                    <th width="40%">Title</th>
+                                    <th width="33%">Receiver</th>
+                                    <th width="12%">Date Sent</th>
+                                    <th width="15%">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $mydb->setQuery('SELECT * FROM `in_ext_com`');
+                                $mydb->setQuery('SELECT * FROM `out_int_com`');
                                 $cur = $mydb->loadResultList();
                                 foreach ($cur as $result) {
                                     echo '<tr>';
-                                    echo '<td>' . $result->in_ext_com_title . '</td>';
-                                    echo '<td>' . $result->in_ext_com_sender . '</td>';
-                                    echo '<td>' . $result->in_ext_com_dateReceived . '</td>';
-                                    $view = 'index.php?view=viewpdf&id=' . $result->in_ext_com_ID;
+                                    echo '<td>' . $result->out_int_com_title . '</td>';
+                                    echo '<td>' . $result->out_int_com_receiver . '</td>';
+                                    echo '<td>' . $result->out_int_com_dateSent . '</td>';
+                                    $view = 'index.php?view=viewpdf&id=' . $result->out_int_com_ID;
                                     echo '<td class="text d-flex gap-2">
             <a title="View" href="'.$view.'" target="_blank" class="btn btn-outline-success w-30">View</a>
-            <a title="Edit" href="index.php?view=edit&id=' . $result->in_ext_com_ID . '" class="btn btn-outline-secondary w-30">Edit</a>
-            <a title="Edit" href="index.php?view=uploadfile&id=' . $result->in_ext_com_ID . '" class="btn btn-outline-warning w-30">Change</a>
-            <a title="Delete" href="controller.php?action=delete&id=' . $result->in_ext_com_ID . '" class="btn btn-outline-danger w-30">Delete</a>
+            <a title="Edit" href="index.php?view=edit&id=' . $result->out_int_com_ID . '" class="btn btn-outline-secondary w-30">Edit</a>
+            <a title="Edit" href="index.php?view=uploadfile&id=' . $result->out_int_com_ID . '" class="btn btn-outline-warning w-30">Change</a>
+            <a title="Delete" href="controller.php?action=delete&id=' . $result->out_int_com_ID . '" class="btn btn-outline-danger w-30">Delete</a>
         </td>';
                                     echo '</tr>';
                                 }
@@ -100,9 +100,9 @@ if (!isset($_SESSION['USERID'])) {
                 </div>
                 <div class="row mb-3 align-items-end">
                     <div class="col">
-                        <label class="control-label" for="LessonTitle">Sender</label>
+                        <label class="control-label" for="LessonTitle">Receiver</label>
                         <input name="deptid" type="hidden" value="">
-                        <input class="form-control input-sm" id="LessonTitle" name="LessonTitle" placeholder="Sender" type="text" value="">
+                        <input class="form-control input-sm" id="LessonTitle" name="LessonTitle" placeholder="Receiver" type="text" value="">
                     </div>
                 </div>
                 <div class="mb-3">

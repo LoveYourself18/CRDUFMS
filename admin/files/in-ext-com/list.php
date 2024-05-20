@@ -47,10 +47,10 @@ if (!isset($_SESSION['USERID'])) {
                         <table id="example" class="datatable-1 table table-striped table-bordered table-hover table-responsive" style="font-size:12px" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Title</th>
-                                    <th>Sender</th>
-                                    <th>Date Received</th>
-                                    <th width="27%">Action</th>
+                                    <th width="40%">Title</th>
+                                    <th width="33%">Sender</th>
+                                    <th width="12%">Date Received</th>
+                                    <th width="15%">Action</th>
                                 </tr>
                             </thead>
                             <tbody>

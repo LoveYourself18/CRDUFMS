@@ -37,7 +37,7 @@ class Lesson
             'SELECT * FROM ' .
                 self::$tblname .
                 " 
-			WHERE n_ext_com_title = '{$chapter}'"
+			WHERE in_ext_com_title = '{$chapter}'"
         );
         $cur = $mydb->executeQuery();
         $row_count = $mydb->num_rows($cur);
